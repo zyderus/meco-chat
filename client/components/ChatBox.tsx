@@ -4,6 +4,7 @@ import io from 'socket.io-client'
 import Image from 'next/image'
 import Messages from './Messages'
 
+// LINK TO SOCKET API
 let socket = io(`http://192.168.20.179:5500`)
 
 const Chat = ({ user }: any) => {

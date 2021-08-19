@@ -45,6 +45,15 @@ Next, NextAuth, Typescript, Socket.io
    npm run build
    ```
 
+4. Set Socket API path
+
+   ```sh
+   filename: /components/ChatBox.tsx
+   let socket = io('localhost:5500')
+   ```
+
+   Replace localhost:5500 with your socket server
+
 ## Contributors
 
 - Rustam Ziyadov

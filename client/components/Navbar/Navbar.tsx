@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className={styles.navbar_items}>
       <Link href='/'>
         <a>
-          <h1 className={styles.navbar_logo}>MECO CHAT</h1>
+          <h1 className={styles.navbar_logo}>MECO</h1>
         </a>
       </Link>
       <div className={styles.menu_icon} onClick={() => setClicked(!clicked)}>
