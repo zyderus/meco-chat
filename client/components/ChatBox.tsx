@@ -4,7 +4,7 @@ import io from 'socket.io-client'
 import Image from 'next/image'
 import Messages from './Messages'
 
-let socket = io(`${process.env.SOCKET_API}`)
+let socket = io(`http://192.168.20.179:5500`)
 
 const Chat = ({ user }: any) => {
   const [feedback, setFeedback] = useState('')
@@ -16,11 +16,17 @@ const Chat = ({ user }: any) => {
   const userName = user.email.substring(0, user.email.indexOf('@'))
 
   const handleSend = (e: any) => {
-    socket.emit('chat', {
-      message,
-      user: userName,
-    })
-    setMessage('')
+    if (!message.trim()) {
+      setMessage('')
+      return
+    } else {
+      socket.emit('chat', {
+        message,
+        user: userName,
+      })
+      setMessage('')
+      return
+    }
   }
 
   const handleOnChange = (e: any) => {
@@ -44,7 +50,7 @@ const Chat = ({ user }: any) => {
   }, [])
 
   useEffect(() => input.current.focus(), [])
-  useEffect(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), [messages])
+  useEffect(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), [messages, feedback])
 
   return (
     <div className={styles.container}>
@@ -55,6 +61,7 @@ const Chat = ({ user }: any) => {
         <div className={styles.chat_window}>
           <Messages messages={messages} name={userName} />
           <div className={styles.feedback}>{feedback}</div>
+          <div className={styles.messageSpacer}></div>
           <div ref={messagesEndRef} />
         </div>
         <input

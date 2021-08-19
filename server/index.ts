@@ -8,7 +8,7 @@ const httpServer = createServer(app)
 const PORT = process.env.PORT || 5500
 const options: any = {
   cors: true,
-  origins: ['localhost:3000'],
+  origins: '*',
 }
 const io = new Server(httpServer, options)
 

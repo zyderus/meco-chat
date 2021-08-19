@@ -12,7 +12,6 @@ const Message = ({ message: { message, user, time }, name }) => {
 
   return isSentByCurrentUser ? (
     <div className={styles.userDialog}>
-      <p className={styles.userName}>me</p>
       <div className={styles.messageCloud}>
         <p>{message}</p>
         <p className={styles.time}>{time}</p>
