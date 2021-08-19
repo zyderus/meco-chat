@@ -1,0 +1,156 @@
+.navbar_items {
+  height: 70px;
+  min-height: 70px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_items a {
+  text-decoration: none;
+}
+
+.navbar_logo {
+  white-space: nowrap;
+}
+
+.navbar_logo {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.nav_menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  text-align: center;
+}
+
+.menu_icon {
+  display: none;
+}
+
+.nav_links {
+  margin-inline: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav_links:hover {
+  background-color: var(--secondary);
+  color: var(--accent);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.user_control {
+  flex: 1;
+}
+
+.user_control div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--primary);
+}
+
+.flex > div {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_items {
+    position: relative;
+  }
+
+  .nav_menu {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.2s ease;
+  }
+
+  .navbar_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(15%, 55%);
+  }
+
+  .menu_icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .nav_links {
+    text-align: center;
+    padding: 2rem;
+    width: 100vw;
+    display: table;
+  }
+
+  .nav_menu.active {
+    background: var(--secondary-bg);
+    left: 0;
+    opacity: 1;
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+
+  .nav_links:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+    border-radius: 0;
+  }
+
+  .user_control {
+    margin-top: 2rem;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .user_control Button {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80vw;
+    background: var(--accent);
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .user_control Button:hover {
+    background: var(--secondary);
+    color: var(--accent);
+    transition: 250ms;
+  }
+}
