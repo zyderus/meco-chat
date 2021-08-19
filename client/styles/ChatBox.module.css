@@ -2,8 +2,6 @@
   margin: 0 auto;
   max-width: 400px;
   min-width: 320px;
-  /* min-height: 400px; */
-  height: 100%;
 }
 
 .avatar_container {
@@ -19,15 +17,36 @@
   border: 2px solid #fff !important;
 }
 
-.chat_window {
-  /* border: 1px solid green; */
-  height: calc(100% - 150px);
+.chat_container {
   margin-top: -2rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
+  background-image: url('../public/bg.jpg');
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  height: calc(100vh - 280px);
   min-height: 180px;
+}
+
+.chat_window {
+  padding: 1rem;
+  height: 100%;
   overflow: auto;
-  background-color: #f9f9f9;
-  border-radius: 5px 5px 0 0;
+}
+
+.chat_window::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+.chat_window::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #aaa;
+  border: 3px solid var(--primary);
+}
+.chat_window::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+.chat_window::-webkit-scrollbar-track {
+  background-color: var(--primary);
 }
 
 .output {
@@ -59,14 +78,18 @@
 .container input {
   padding: 10px 20px;
   box-sizing: border-box;
-  background: #eee;
-  border: 0;
+  background: #ccc;
+  border: 1px solid #eee;
+  outline: none;
   display: block;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  font-family: Poppins;
+  background: #eee;
   font-size: 16px;
+}
+
+.container input:hover,
+.container input:focus {
+  background-color: #fff;
 }
 
 .container button {
@@ -76,7 +99,9 @@
   border: 0;
   padding: 12px 0;
   width: 100%;
-  border-radius: 0 0 5px 5px;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  z-index: 2;
 }
 
 @media screen and (max-width: 430px) {

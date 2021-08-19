@@ -1,0 +1,40 @@
+.userDialog,
+.authorDialog {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.1rem;
+}
+
+.authorDialog {
+  justify-content: flex-start;
+}
+
+.userDialog {
+  justify-content: flex-end;
+}
+
+.messageCloud {
+  background-color: #dcf8c6;
+  padding: 0.3rem 0.5rem;
+  min-height: 1.8rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.authorDialog .messageCloud {
+  background-color: #fff;
+}
+
+.userName {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.6rem;
+  color: #999;
+}
