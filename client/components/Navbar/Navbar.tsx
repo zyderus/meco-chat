@@ -6,13 +6,8 @@ import Link from 'next/link'
 import Button from '../Button'
 
 const Navbar = () => {
-  let origin: { current: string | undefined | null } = useRef()
   const [session, loading]: any = useSession()
   const [clicked, setClicked] = useState(false)
-
-  useEffect(() => {
-    origin.current = window.location.origin
-  }, [])
 
   return (
     <nav className={styles.navbar_items}>
@@ -36,7 +31,9 @@ const Navbar = () => {
         })}
         <div className={styles.user_control}>
           {!session ? (
-            <Button onClick={() => signIn('google', { callbackUrl: origin.current + '/chat' })}>Sign In</Button>
+            <Button onClick={() => signIn('google', { callbackUrl: 'https://meco-chat.vercel.app/chat' })}>
+              Sign In
+            </Button>
           ) : (
             <div className={styles.flex}>
               <div> Hi {session.user.name}, </div>
