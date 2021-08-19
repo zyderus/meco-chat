@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Messages from './Messages'
 
 // LINK TO SOCKET API
-let socket = io(`http://192.168.20.179:5500`)
+let socket = io(`https://meco-socket-api.herokuapp.com/`)
 
 const Chat = ({ user }: any) => {
   const [feedback, setFeedback] = useState('')
