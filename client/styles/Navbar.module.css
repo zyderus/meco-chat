@@ -12,10 +12,6 @@
 }
 
 .navbar_logo {
-  white-space: nowrap;
-}
-
-.navbar_logo {
   color: var(--accent);
   font-size: 1.2rem;
   font-family: sans-serif;
@@ -33,6 +29,10 @@
 
 .menu_icon {
   display: none;
+}
+
+.menu_icon i {
+  color: #000 !important;
 }
 
 .nav_links {
@@ -80,9 +80,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
+    /* height: calc(100vh - 70px); */
     position: absolute;
-    top: 70px;
+    top: 0;
+    padding-top: 10rem;
     left: -100%;
     opacity: 1;
     transition: all 0.2s ease;
@@ -93,6 +95,7 @@
     top: 0;
     left: 0;
     transform: translate(15%, 55%);
+    z-index: 2;
   }
 
   .menu_icon {
@@ -103,6 +106,7 @@
     transform: translate(-100%, 60%);
     font-size: 1.4rem;
     cursor: pointer;
+    z-index: 10;
   }
 
   .nav_links {

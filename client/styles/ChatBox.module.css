@@ -87,15 +87,34 @@
   width: 100%;
   position: relative;
   border-radius: 0 0 15px 15px;
-  z-index: 2;
 }
 
 @media screen and (max-width: 430px) {
+  .container,
+  .chat_container,
   .container button,
-  .chat_window,
-  .container {
+  .chat_window {
     width: 100%;
     max-width: 430px;
     border-radius: 0 0 0 0;
+  }
+
+  .container {
+    margin-top: -3.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    text-align: center;
+  }
+
+  .avatar_container {
+    padding: 0;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    z-index: 10;
   }
 }

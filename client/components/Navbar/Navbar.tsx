@@ -22,7 +22,7 @@ const Navbar = () => {
       <ul className={clicked ? styles.nav_menu + ' ' + styles.active : styles.nav_menu}>
         {MenuItems.map((item, idx) => {
           return (
-            <li key={idx + new Date().toDateString()}>
+            <li key={idx + new Date().toDateString()} onClick={() => setClicked(!clicked)}>
               <Link href={item.url}>
                 <a className={styles[item.cName]}>{item.title}</a>
               </Link>
