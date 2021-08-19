@@ -12,7 +12,7 @@
 </p>
 
 <div align="center">
-  <img src="/public/assets/images/meco.png" width="100%">
+  <img src="https://github.com/zyderus/portfolio/blob/main/public/assets/images/meco.png?raw=true" width="100%">
 </div>
 
 ## Description
