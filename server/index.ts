@@ -29,4 +29,5 @@ io.on('connection', (socket: Socket) => {
   })
 })
 
+app.get('/', (req, res) => res.send('<h4>Socket is up and running...</h4>'))
 httpServer.listen(PORT, () => console.log(`socket up @ http://localhost:${PORT}`))
