@@ -1,14 +1,18 @@
 <div align="center">
-  <h2>Meco Chat</h2>
-  <strong>Version 0.1.0</strong>
+  <h2>Meco</h2>
+  <strong>Version 0.5.0</strong>
 </div>
 
 <p align="center">
-  <!-- 🚀 View @ https://next-tuts-g6xp1s7fp-zyderus.vercel.app | hosted with <a href="https://vercel.com/">vercel</a> -->
+  🚀 View @ https://meco-chat.vercel.app | hosted with <a href="https://vercel.com/">Vercel</a>
+</p>
+
+<p align="center">
+  💪 Deployed @ https://meco-socket-api.herokuapp.com | hosted with <a href="https://www.heroku.com/">Heroku</a>
 </p>
 
 <div align="center">
-  <!-- <img src="/public/assets/images/Portfolio.png" width="100%"> -->
+  <img src="/public/assets/images/meco.png" width="100%">
 </div>
 
 ## Description
