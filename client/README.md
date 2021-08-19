@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  💪 Deployed @ https://meco-socket-api.herokuapp.com | hosted with <a href="https://www.heroku.com/">Heroku</a>
+  💪 API deployed @ https://meco-socket-api.herokuapp.com | hosted with <a href="https://www.heroku.com/">Heroku</a>
 </p>
 
 <div align="center">
