@@ -8,11 +8,11 @@
 </p>
 
 <p align="center">
-  💪 Deployed @ https://meco-socket-api.herokuapp.com | hosted with <a href="https://www.heroku.com/">Heroku</a>
+  💪 API deployed @ https://meco-socket-api.herokuapp.com | hosted with <a href="https://www.heroku.com/">Heroku</a>
 </p>
 
 <div align="center">
-  <img src="/public/assets/images/meco.png" width="100%">
+  <img src="https://github.com/zyderus/portfolio/blob/main/public/assets/images/meco.png?raw=true" width="100%">
 </div>
 
 ## Description
